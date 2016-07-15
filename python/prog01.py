@@ -6,3 +6,7 @@
 # @Version : $Id$
 
 import os
+bornYear = input("Enter your bron year：")
+nowYear = input("Enter this year：")
+age = nowYear - bornYear
+print"你 is %d year old" % (age)

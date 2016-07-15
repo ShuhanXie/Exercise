@@ -3,8 +3,8 @@ using namespace std;
 
 int main() {
  int str; 
-  // cin>>str;
- for(int i=0;i<5;i++){
+   cin>>str;
+ for(int i=0;i<str;i++){
  cout << "Hello! World!\n"; 
  cout << "±z¦n! C++!"<<endl;
  cout << "test "<<i+1<<endl;
