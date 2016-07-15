@@ -1,0 +1,36 @@
+# Project: labe14
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = labe14_private.res
+OBJ      = ../labe14/main.o ../labe14/complex.o $(RES)
+LINKOBJ  = ../labe14/main.o ../labe14/complex.o $(RES)
+LIBS     = -L"D:/Dev_C++/Dev-Cpp/MinGW64/lib" -L"D:/Dev_C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Dev_C++/Dev-Cpp/MinGW64/include" -I"D:/Dev_C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev_C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Dev_C++/Dev-Cpp/MinGW64/include" -I"D:/Dev_C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev_C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Dev_C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = labe14.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+../labe14/main.o: ../labe14/main.cpp
+	$(CPP) -c ../labe14/main.cpp -o ../labe14/main.o $(CXXFLAGS)
+
+../labe14/complex.o: ../labe14/complex.cpp
+	$(CPP) -c ../labe14/complex.cpp -o ../labe14/complex.o $(CXXFLAGS)
+
+labe14_private.res: labe14_private.rc 
+	$(WINDRES) -i labe14_private.rc --input-format=rc -o labe14_private.res -O coff 
+
