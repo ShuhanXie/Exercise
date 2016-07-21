@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
+#include <time.h> 
 #include "myArray.h"
 
 using namespace std;
@@ -15,6 +16,12 @@ void intArray::mkArray(int si,int va,int st){
 	setStep(st);
 	dat=new int(size);
 	init(va);
+}
+void intArray::randx(){
+	srand((int)time(NULL));
+	for(int i=0;i<size;i++){
+		dat[i]+=rand()%10;
+	}
 }
 void intArray::setStep(int st){
 	if(st<1){
@@ -100,6 +107,34 @@ void intArray::dumpALL() {
 		}
 	cout << endl;
 }
+void intArray::sort(){
+	int i,j,tmp;
+	randx();
+	cout<<setw(15)<<"before Array=";
+	dump();
+	for(i=0;i<size-1;i++){
+		for(j=i+1;j<size;j++){
+			if(dat[i]>dat[j]){
+				tmp=dat[i];
+				dat[i]=dat[j];
+				dat[j]=tmp;
+			}
+		}
+	}
+}
+void intArray::reverse(){
+	int i,tmp;
+	randx();
+	cout<<setw(15)<<"before Array=";
+	dump();
+	for(i=0;i<size/2;i++){
+		tmp=dat[i];
+		dat[i]=dat[size-i-1];
+		dat[size-i-1]=tmp;
+	}
+}
+
+
 
 
 //----------floatArray-------------------------
@@ -113,6 +148,12 @@ void floatArray::mkArray(int si,float va,int st){
 	setStep(st);
 	dat=new float(size);
 	init(va);
+}
+void floatArray::randx(){
+	srand((float)time(NULL));
+	for(int i=0;i<size;i++){
+		dat[i]+=rand()%10;
+	}
 }
 void floatArray::setStep(int st){
 	if(st<1){
@@ -198,4 +239,30 @@ void floatArray::dumpALL() {
 			cout << setw(5) << "X";
 		}
 	cout << endl;
+}
+void floatArray::sort(){
+	int i,j,tmp;
+	randx();
+	cout<<setw(15)<<"before Array=";
+	dump();
+	for(i=0;i<size-1;i++){
+		for(j=i+1;j<size;j++){
+			if(dat[i]>dat[j]){
+				tmp=dat[i];
+				dat[i]=dat[j];
+				dat[j]=tmp;
+			}
+		}
+	}
+}
+void floatArray::reverse(){
+	int i,tmp;
+	randx();
+	cout<<setw(15)<<"before Array=";
+	dump();
+	for(i=0;i<size/2;i++){
+		tmp=dat[i];
+		dat[i]=dat[size-i-1];
+		dat[size-i-1]=tmp;
+	}
 }

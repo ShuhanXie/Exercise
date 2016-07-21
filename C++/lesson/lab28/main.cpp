@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
+#include <time.h> 
 #include "myArray.h"
 
 using namespace std;
@@ -33,6 +34,12 @@ int main() {
 	d.resize(6);
 	cout<<setw(15)<<"D_resize=";
 	d.dumpALL();
+	c.sort();
+	cout<<setw(15)<<"after Array=";
+	c.dump();
+	d.reverse();
+	cout<<setw(15)<<"after Array=";
+	d.dump();
 	
 	cout<<"------------------------------------"<<endl;
 	
@@ -51,9 +58,13 @@ int main() {
 	h.resize(6);
 	cout<<setw(15)<<"H_resize=";
 	h.dumpALL();
-	
+	g.sort();
+	cout<<setw(15)<<"after Array=";
+	g.dump();
+	h.reverse();
+	cout<<setw(15)<<"after Array=";
+	h.dump();	
 	
 	system("pause");
 	return 0;
 }
-
