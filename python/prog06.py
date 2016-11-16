@@ -8,7 +8,7 @@ def solve(value):
     if value<2:
         print "Impossible"
     else :
-        for i in range(value,2,-1):
+        for i in range(value,1,-1):
             for j in range(i-1,0,-1):
                 if rank(i)/rank(j)==value:
                     n=i
