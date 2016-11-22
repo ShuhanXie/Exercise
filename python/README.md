@@ -66,7 +66,7 @@ Enter Number:9
 PS. 需有除錯，N>4。
 
 ## prog06
-先輸入一變數num決定要輸入幾個參數，然後開始輸入參數，讀取參數後來判斷，規則如下
+先輸入一變數num決定要輸入幾個參數，然後開始輸入參數，讀取參數後來判斷，規則如下：
  找出 n!/m!,當n!=1*2*3*4*.....*n (n>=1)
  例如：n=6,m=3, 6!=3!=720/6=120，如果有多個解，要找n為最小的一組答案印出。
 
@@ -82,3 +82,19 @@ case  2 : Impossible
 case  3 : 5   2
   
 ```
+
+## prog07
+先輸入一變數num決定要輸入幾個參數，然後開始輸入參數，讀取參數後來判斷，規則如下：
+ 須檢查輸入a的絕對值是否大於1,並找出a=b^m,且印出m最大的那組b跟m(a跟b可為負數),
+ 例如：16=4^4=2^8,這時候就要印出a=16,b=2,m=8
+
+```
+please enter number[quantity]:3
+please enter number[value]:72
+please enter number[value]:36
+please enter number[value]:-125
+a= 72  b= 72  m= 1
+a= 36  b= 6  m= 2
+a= -125  b= -5  m= 3
+  
+``` 
