@@ -154,3 +154,6 @@ Arry=
 No, value1= 69  value2= 63
 
 ``` 
+
+## exam03
+¬ù·æ¤Ò°ÝÃD
