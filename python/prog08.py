@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
 arr=[0]
 def square(num):
+    st=0
     for i in range(1,num):
-        st=0
         if i**2==num:
             st=1
             return i
