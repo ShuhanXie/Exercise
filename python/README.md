@@ -123,3 +123,34 @@ please enter number :126354596
 5
   
 ```  
+
+## exam01
+块N璶块碭把计块Ч把计硂钡把计羆㎝蛤キА(计翴彼)礛酚块抖把计パ逼把计  
+``` 
+please enter number[quantity]:6
+please enter number[value]:22
+please enter number[value]:6
+please enter number[value]:19
+please enter number[value]:82
+please enter number[value]:6
+please enter number[value]:42
+sum= 177
+average= 29
+22   6   19   82   6   42   
+6   6   19   22   42   82   
+``` 
+## exam02
+块N礛玻ネ计1~N*N睹计皚硂蝴锣传N*N痻皚程耞硂痻皚ㄢ兵癸à絬计だ琌Yes┪No蛤癸à絬计  
+
+``` 
+please enter number[quantity]:5
+arr=[ 14   5   17   19   2   4   20   12   6   11   23   22   18   25   3   7   13   15   1   10   24   8   9   21   16   ]
+Arry=
+  14    5   17   19    2  
+   4   20   12    6   11  
+  23   22   18   25    3  
+   7   13   15    1   10  
+  24    8    9   21   16  
+No, value1= 69  value2= 63
+
+``` 
